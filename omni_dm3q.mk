@@ -10,7 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/twrp/config/packages.mk)
 
 # Inherit from dm3q device
 $(call inherit-product, device/samsung/dm3q/device.mk)
@@ -27,8 +27,3 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="dm3qxxx-user 13 TP1A.220624.014 S918BXXS4CXD8 release-keys"
 
 BUILD_FINGERPRINT := samsung/dm3qxxx/dm3q:13/TP1A.220624.014/S918BXXS4CXD8:user/release-keys
-
--include vendor/twrp/config/packages.mk
-
-PRODUCT_EXTRA_RECOVERY_KEYS := \
-    vendor/twrp/build/target/product/security/lineage
